@@ -1,0 +1,60 @@
+<%@page import="vo.MemberVo"%>
+<%@page import="dao.MemberDao"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	int custno = Integer.parseInt(request.getParameter("custno"));
+	MemberDao dao = new MemberDao();
+	MemberVo member = dao.getMember(custno);
+%>
+
+<jsp:include page="master/header.jsp"/>
+
+<section>
+	<div class="container">
+	<p class="title">홈쇼핑 회원 수정</p>
+	<form action="memberUpdateProc.jsp" method="post" name="frm">
+		<table width="600px">
+			<tr>
+				<td>회원정보(자동발생)</td>
+				<td><input type="number" value="<%=member.getCustno()%>"
+				name="custno" id="custno" readonly="readonly"></td>
+			</tr>
+			
+			<tr>
+				<td>회원성명</td>
+				<td><input type="text" value="<%=member.getCustname()%>"
+				id="custname" name="custname"></td>
+			</tr>
+			
+			<tr>
+				<td>회원전화</td>
+				<td><input type="text" value="<%=member.getPhone()%>"
+				id="phone" name="phone"></td>
+			</tr>
+			
+			<tr>
+				<td>회원주소</td>
+				<td><input type="text" value="<%=member.getAddress()%>"
+				id="address" name="address"></td>
+			</tr>
+			
+			<tr>
+				<td>가입일자</td>
+				<td><input type="text" value="<%=member.getJoindate()%>"
+				id="joindate" name="joindate"></td>
+			</tr>
+			
+			<tr>
+				<td>고객등급[A:VIP, B:일반, C:직원]</td>
+				<td><select id="grade" name="grade">
+			<option value="A" <%="A".equals(member.getGrade()) ? "selected" : ""%>>VIP</option>
+				
+				</select></td>			
+			</tr>
+		</table>
+	</form>
+	</div>
+</section>
+
+<jsp:include page="master/footer.jsp"/>

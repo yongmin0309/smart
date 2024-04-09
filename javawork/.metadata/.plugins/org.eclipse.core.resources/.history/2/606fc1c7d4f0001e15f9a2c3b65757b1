@@ -1,0 +1,5 @@
+package vo;
+
+public class MentoVo {
+	private String artist_id;
+}

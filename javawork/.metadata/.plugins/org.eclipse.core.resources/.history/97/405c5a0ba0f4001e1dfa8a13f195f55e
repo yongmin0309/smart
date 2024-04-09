@@ -1,0 +1,15 @@
+create table tbl_student_202205(
+	studentid char(8) primary key,
+	studentname varchar2(20),
+	majorcode char(2),
+	jumin varchar2(14),
+	phone varchar2(13),
+	course char(2)
+);
+
+insert into tbl_student_202205 values('2022001','김길동','03','030101-3000001','010-1111-0001','BD');
+insert into tbl_student_202205 values('2022002','이길동','03','030101-3000002','010-1111-0002','BD');
+insert into tbl_student_202205 values('2022003','박길동','03','030101-3000003','010-1111-0003','BD');
+insert into tbl_student_202205 values('2022004','정길동','03','030101-3000004','010-1111-0004','BD');
+insert into tbl_student_202205 values('2022005','최길동','03','030101-3000005','010-1111-0005','BD');
+insert into tbl_student_202205 values('2022006','황길동','03','030101-3000006','010-1111-0006','BD');

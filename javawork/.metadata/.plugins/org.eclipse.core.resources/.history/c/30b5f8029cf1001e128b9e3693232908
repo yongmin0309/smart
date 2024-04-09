@@ -1,0 +1,27 @@
+package biz;
+
+import java.util.ArrayList;
+
+import dao.MemberDao;
+import vo.MemberVo;
+import vo.MentoVo;
+
+public class MemberService {
+
+		MemberDao dao = new MemberDao();
+		
+		public ArrayList<MemberVo> memberList(){
+			ArrayList<MemberVo> list = dao.memberList();
+			return list;
+		}
+			
+		public ArrayList<MentoVo> mentoList() {
+			ArrayList<MentoVo> list = dao.mentoList();
+			return list;
+		}
+		
+		public ArrayList<MemberRankVo> mentoList() {
+			ArrayList<MemberRankVo> list = dao.mentoList();
+			return list;
+		}
+}

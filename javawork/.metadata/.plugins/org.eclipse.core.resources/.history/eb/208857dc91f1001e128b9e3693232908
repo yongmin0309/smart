@@ -1,0 +1,8 @@
+package vo;
+
+public class MentoVo {
+	private String mento_id;
+	private String mento_name;
+	
+	
+}

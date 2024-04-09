@@ -1,0 +1,19 @@
+package vo;
+
+public class MentoVo {
+	private String artist_id;
+	private String mento_name;
+	
+	public String getArtist_id() {
+		return artist_id;
+	}
+	public void setArtist_id(String artist_id) {
+		this.artist_id = artist_id;
+	}
+	public String getMento_name() {
+		return mento_name;
+	}
+	public void setMento_name(String mento_name) {
+		this.mento_name = mento_name;
+	}
+}

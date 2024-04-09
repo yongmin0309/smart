@@ -1,0 +1,8 @@
+package vo;
+
+public class PointVo {
+	private String serial_no;
+	private String artist_id;
+	private String mento_id;
+	private int point;
+}

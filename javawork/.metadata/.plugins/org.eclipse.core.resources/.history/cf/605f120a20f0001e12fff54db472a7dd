@@ -1,0 +1,26 @@
+package controller;
+
+import java.util.HashMap;
+
+import javax.servlet.ServletConfig;
+import javax.sql.rowset.serial.SerialException;
+
+public class FrontController extends HttpServlet{
+	
+	String charset = null;
+	HashMap<String, Controller> list = null;
+	
+	private final String prefix = "/view/";
+	private final String postfix = ".jsp";
+	
+	public void init(ServletConfig config) throws SerialException {
+		charset = config.getInitParameter("charset");
+		
+		
+	//	list = new HashMap<String, Controller>();
+	//	list.put("/memberList", new memberListController());
+	//	list.put("/memberInsert", new memberInsertController());
+	//	list.put("/mentoSearch", new mentoSearchController());
+	//	list.put("/memberSearch", new memberSearchController());
+	}
+}

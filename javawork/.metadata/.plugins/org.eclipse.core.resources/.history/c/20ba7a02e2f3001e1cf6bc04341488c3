@@ -1,0 +1,10 @@
+package controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class HttpUtil {
+	public static void forword(HttpServletRequest req, HttpServletResponse resp, String path) {
+		
+	}
+}

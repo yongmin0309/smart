@@ -1,0 +1,12 @@
+package controller;
+
+import java.util.HashMap;
+
+public class FrontController extends HttpServlet{
+	
+	String charset = null;
+	HashMap<String, Controller> list = null;
+	
+	private final String prefix = "/view/";
+	private final String postfix = ".jsp";
+}

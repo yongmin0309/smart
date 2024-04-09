@@ -1,0 +1,18 @@
+package biz;
+
+import java.sql.SQLException;
+
+
+import vo.CourseVo;
+
+	
+
+public class CourseService {
+	
+	CourseDao dao = new CourseDao();
+	
+	public int memberInsert(CourseVo course) throws SQLException {
+		int n = dao.courseVoInsert(course);
+		return n;
+	}
+}

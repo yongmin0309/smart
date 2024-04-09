@@ -1,0 +1,29 @@
+package controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+import biz.CourseService;
+import common.DBUtils;
+
+public class CourseDeleteController implements Controller{
+	public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException , IOException {
+		
+		String id = req.getParameter("id");
+		
+		CourseService service = new CourseService();
+		int n = service.courseDelete(id);
+		
+		if(n > 0) {
+			req.setAttribute("id", id);
+			HttpUtil.forword(req, resp, "/courseDelete");
+		}else {
+			req.setAttribute("error", id);
+			HttpUtil.forword(req, resp, "/courseDelete");
+		}
+	}
+}

@@ -1,0 +1,9 @@
+package controller;
+
+import java.util.HashMap;
+
+public class FrontController extends HttpServlet{
+	
+	String charset = null;
+	HashMap<String, Controller> list = null;
+}

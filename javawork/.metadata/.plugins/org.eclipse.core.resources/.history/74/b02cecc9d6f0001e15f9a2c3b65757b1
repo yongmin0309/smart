@@ -1,0 +1,14 @@
+package biz;
+
+import java.util.ArrayList;
+
+import dao.MemberDao;
+import vo.MemberVo;
+
+public class MemberService {
+
+		MemberDao dao = new MemberDao();
+		public ArrayList<MemberVo> list = dao.memberList();
+			return list;
+		
+}

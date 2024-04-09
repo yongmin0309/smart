@@ -1,0 +1,8 @@
+package vo;
+
+public class MemberRankVo {
+	private String serial_no;
+	private String artist_id;
+	private String mento_id;
+	private String point;
+}

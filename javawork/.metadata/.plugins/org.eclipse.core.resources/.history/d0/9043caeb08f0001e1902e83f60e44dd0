@@ -1,0 +1,13 @@
+<%@page import="vo.MemberVo"%>
+<%@page import="dao.MemberDao"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	int custno = Integer.parseInt(request.getParameter("custno"));
+	MemberDao dao = new MemberDao();
+	MemberVo member = dao.getMember(custno);
+%>
+
+<jsp:include page="master/header.jsp"/>
+
+<jsp:include page="master/footer.jsp"/>

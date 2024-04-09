@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="dao.MemberDao"%>
+
+<jsp:include page="master/header.jsp"/>
+<%
+	MemberDao dao = new MemberDao();
+	int custno = dao.getMaxCustNo();
+%>
+
+<section>
+<div class="container">
+		<p class="title">홈쇼핑 회원등록</p>
+		<form action="memberInputProc.jsp" method="post" name="frm">
+			<table wifth="600px">
+			
+			</table>
+		
+		
+		</form>
+
+
+</div>
+</section>
+
+<jsp:include page="master/footer.jsp"/>

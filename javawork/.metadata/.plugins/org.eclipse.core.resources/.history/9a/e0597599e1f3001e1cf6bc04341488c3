@@ -1,0 +1,6 @@
+package common;
+
+public class HttpUtil {
+
+	public void static void forword()
+}

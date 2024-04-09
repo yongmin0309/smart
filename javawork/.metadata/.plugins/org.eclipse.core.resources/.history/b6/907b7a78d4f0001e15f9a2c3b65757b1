@@ -1,0 +1,10 @@
+package vo;
+
+public class MemberVo {
+	private char artist_id;
+	private String artist_name;
+	private String artist_birth;
+	private String artist_id;
+	private String artist_id;
+	private String artist_id;
+}

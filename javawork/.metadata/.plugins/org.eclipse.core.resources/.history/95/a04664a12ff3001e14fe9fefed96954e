@@ -1,0 +1,15 @@
+package vo;
+
+public class CourseVo {
+	private String id;
+	private String name;
+	private int credit;
+	private String lecturer;
+	private int week;
+	private int start_hour;
+	private int end_hour;
+	
+	
+	
+	
+}

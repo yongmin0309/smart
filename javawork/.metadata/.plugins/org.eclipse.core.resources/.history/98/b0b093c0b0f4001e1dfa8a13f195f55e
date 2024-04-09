@@ -1,0 +1,11 @@
+package vo;
+
+public class GradeVo {
+	private String studentid;
+	private String subjectcode;
+	private int mid;
+	private int final;
+	private int mid;
+	private int mid;
+	private int mid;
+}

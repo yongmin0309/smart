@@ -1,0 +1,7 @@
+package controller;
+
+public class FrontController extends HttpServlet{
+	
+	String charset = null;
+	
+}

@@ -1,0 +1,22 @@
+create table tbl_artist_201905(
+	artist_id char(4) primary key,
+	artist_name varchar2(20),
+	artist_birth char(8),
+	artist_gender char(1),
+	talent char(1),
+	agency varchar2(20)
+);
+drop table tbl_artist_201905;
+drop table tbl_mento_201905;
+drop table tbl_point201905;
+
+insert into TBL_ARTIST_201905 values
+('A001','19970101','F','1','A엔터테이먼트');
+insert into TBL_ARTIST_201905 values
+('A002','19970201','M','2','B엔터테이먼트');
+insert into TBL_ARTIST_201905 values
+('A003','19970301','M','3','C엔터테이먼트');
+insert into TBL_ARTIST_201905 values
+('A004','19970401','M','1','D엔터테이먼트');
+insert into TBL_ARTIST_201905 values
+('A005','19970501','F','2','E엔터테이먼트');

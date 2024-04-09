@@ -1,0 +1,55 @@
+
+<%@page import="vo.MentoVo"%>
+<%@ page import="vo.MemberVo" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<jsp:include page="master/header.jsp"/>
+
+<section>
+		<div class="container">
+			<p class="title">회원목록조회/수정</p>
+<%
+	ArrayList<MentoVo> list = (ArrayList<MentoVo>)request.getAttribute("list");
+	if(!list.isEmpty()) {
+%>		
+
+	<table>
+		<tr>
+			<td>참가번호</td>
+			<td>참가자명</td>
+			<td>생년월일</td>
+			<td>점수</td>
+			<td>등급</td>
+			<td>멘토</td>
+		</tr>
+		
+<%
+	for(MentoVo mento : list) {
+		request.setAttribute("mento", mento);
+%>			
+	<tr>	
+					<td>${mento.custname }</td>
+					<td>${mento.phone }</td>
+					<td>${mento.address }</td>
+					<td>${mento.joindate }</td>
+					<td>${mento.grade }</td>
+					<td>${mento.city }</td>
+	</tr>
+<%
+	}
+%>						
+	</table>
+<%
+	}else{
+%>		
+	<p style="text-align: cneter"> 등록된 회원 정보가 없습니다</p>
+<%
+	}
+%>
+		</div>
+</section>
+
+
+<jsp:include page ="master/footer.jsp"/>

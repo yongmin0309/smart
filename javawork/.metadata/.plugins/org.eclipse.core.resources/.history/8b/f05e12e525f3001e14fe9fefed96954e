@@ -1,0 +1,26 @@
+package biz;
+
+import java.security.Provider.Service;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import dao.CourseDao;
+import vo.CourseVo;
+
+	
+
+public class CourseService {
+	
+	CourseDao dao = new CourseDao();
+	
+	public ArrayList<CourseVo> courseList(){
+		ArrayList<CourseVo> list = dao.courseList();
+		return list;
+	}
+	
+	
+	public int courseInsert(CourseVo course) throws SQLException {
+		int n = dao.CourseInsert(course);
+		return n;
+	}
+}
